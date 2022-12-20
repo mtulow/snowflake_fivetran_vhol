@@ -8,7 +8,8 @@ DBA MODE
 -----
 --Let's set our worksheet role and db/schema
 use role ACCOUNTADMIN;
-use schema PC_FIVETRAN_DB.GOOGLE_ADS_DBT;
+use database PC_FIVETRAN_DB;
+use schema PC_FIVETRAN_DB.GOOGLE_ADS_DEMO;
 
 
 -----
@@ -16,7 +17,7 @@ use schema PC_FIVETRAN_DB.GOOGLE_ADS_DBT;
 -----
 --Make a new DEV db and schema and then clone the 3 key tables for isolated analysis and experimentation
 create database GOOGLE_ADS_DEV clone PC_FIVETRAN_DB;
-use schema GOOGLE_ADS_DEV.GOOGLE_ADS_DBT;
+use schema GOOGLE_ADS_DEV.GOOGLE_ADS_DEMO;
 
 -----
 --C--
